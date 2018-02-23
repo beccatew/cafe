@@ -1,0 +1,20 @@
+<h1 class="center">Add New Food</h1>
+<form method="POST" action="/apps">
+  <div class="input-field">
+    <input id="title" required name="title" />
+    <label class="active" for="title">Title</label>
+  </div>
+  <div class="input-field">
+    <textarea class="materialize-textarea" id="desc" required name="description"></textarea>
+    <label for="desc" class="active">Description</label>
+  </div>
+
+  <div class="input-field">
+    <form action="http://itp.nyu.edu/~rsm347/sinatra/file_upload/save_image" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Upload image">
+    </form>
+  </div>
+
+  <button class="btn right" type="submit">Save</button>
+</form>

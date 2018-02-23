@@ -1,0 +1,15 @@
+<h1 class="center">Edit <%= @app.title %></h1>
+<form method="POST" action="/apps/<%= @app.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <div class="input-field">
+    <input id="title" required name="title" value="<%= @app.title %>" />
+    <label class="active" for="title">Title</label>
+  </div>
+  <div class="input-field">
+    <textarea class="materialize-textarea" id="desc" required name="description">
+      <%= @app.description %>
+    </textarea>
+    <label for="desc" class="active">Description</label>
+  </div>
+ <button class="btn right" type="submit">Save</button>
+</form>
